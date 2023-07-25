@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+html,body{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size:15px;
+}
+a{
+    text-decoration:none;
+    color:#000;
+}
+img{
+    display:block;
+    max-width:100%;
+}
+#layout{
+    max-width:500px;
+    margin:auto;
+    position: relative;
+}
+header{
+    background:purple;
+    color:#fff;
+    text-align:center;
+    display:flex;
+    align-items:center;
+    padding:12px 50px 10px 15px;
+    
+}
+header h1{
+    flex:1;
+}
+header h1 ruby rt{
+    color:yellow;
+}
+header button.material-icons{
+    color:#fff;
+    background:none;
+    border:none;
+    padding:7px;
+    font-size:1.7rem;
+}
+nav{
+    height:70vh;
+    padding: 20px 0;
+    background:rgba(255,255,255,0.9);
+    box-shadow:0 3px 5px rgba(0,0,0,0.4);
+    display:none;
+    position:absolute;
+    width:100%;
+}
+nav a{
+    display:block;
+    padding:20px 40px;
+    border-bottom:1px solid #ddd;
+}
+main{
+    padding: 20px 10px;
+}
+
+#f1+p{
+    text-align: justify;
+    margin-bottom: 10px;
+}
+#f1+p>img{
+    width:80px;
+    float:left;
+    margin-right:10px;
+    transition:1s;
+}
+#f1+p>img:hover{
+    transform:scale(1.2) rotate(-20deg);    
+}
+figure{
+    overflow:hidden;
+    position:relative;
+}
+
+#slide{
+    display:flex;
+    position:relative;
+}
+#circle{
+    position:absolute;
+    bottom:50px;
+    left:45%;
+}
+#circle button{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    border:none;
+}
+#circle button.blue{
+    background:purple;
+}
+figure img{
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+figcaption{
+    text-align:center;
+    font-size:0.9rem;
+    padding-top:10px;
+    color:#555;
+}
+#f2{
+    background: pink;
+    padding:10px;
+}
+#f2 h3::before{
+    content:'\2663';
+    color:green;
+    padding-right:8px;
+}
+#f2 p:not(:last-of-type){
+    padding-bottom: 10px;
+}
+footer{
+    background: #ddd;
+    padding:8px;
+    text-align:center;
+}
+#up{
+    background:rgba(255,255,255,0.9);
+    border-radius:5px;
+    box-shadow:0 0 5px #000;
+    position:fixed;
+    right:10px;
+    bottom:10px;
+    padding:3px;
+    font-weight: bold;
+}
+
+@media(min-width:501px){
+    #up{right:calc(((100% - 500px) / 2) + 10px);}
+}
